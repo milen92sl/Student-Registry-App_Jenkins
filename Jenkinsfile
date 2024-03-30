@@ -19,9 +19,6 @@ pipeline {
         stage('Deploy to production') {
             
             steps {
-                script {
-                    input("Deploy to production?")
-                }
                 echo 'Deploying...'
             }
         }
