@@ -1,4 +1,3 @@
-User
 pipeline {
     agent any
     stages {
@@ -15,6 +14,11 @@ pipeline {
         stage('Run integration tests') {
             steps {
                 bat 'npm run test'
+            }
+        }
+        stage('Deploy to production') {
+            steps {
+                echo 'Deploying...'
             }
         }
     }
