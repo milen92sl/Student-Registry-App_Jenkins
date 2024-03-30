@@ -17,6 +17,9 @@ pipeline {
             }
         }
         stage('Deploy to production') {
+            scrit{
+                input("Deploy to production?")
+            }
             steps {
                 echo 'Deploying...'
             }
